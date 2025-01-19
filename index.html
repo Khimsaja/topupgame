@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Top-Up</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .game-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+        .game-container {
+            margin-top: 50px;
+        }
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .category-tabs button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #ffdd99;
+            cursor: pointer;
+        }
+        .category-tabs button:hover {
+            background-color: #f0c27b;
+        }
+        .game-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .game-item {
+            margin: 10px;
+        }
+        .game-item img {
+            max-width: 150px;
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Top-Up Game</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        .slider {
+            width: 70%; /* Ubah ukuran lebar slider sesuai kebutuhan */
+            height: 500px; /* Ubah ukuran tinggi slider sesuai kebutuhan */
+            overflow: hidden;
+            position: relative;
+            border-radius: 20px;
+            margin: auto;
+            margin-top: 30px;
+        }
+        .slides {
+            display: flex;
+            border-radius: 20px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .navigation-manual {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: -40px;
+        }
+        .manual-btn {
+            border: 2px solid #40D3DC;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+        .manual-btn:not(:last-child) {
+            margin-right: 40px;
+        }
+        .manual-btn:hover {
+            background: #40D3DC;
+        }
+    </style>
+</head>
+<body>   
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="images/banner2.png" alt="Banner 1">
+            </div>
+            <div class="slide">
+                <img src="images/banner3.png" alt="Banner 2">
+            </div>
+        </div>
+        <div class="navigation-manual">
+            <div class="manual-btn" onclick="manualSlide(0)"></div>
+            <div class="manual-btn" onclick="manualSlide(1)"></div>
+            <div class="manual-btn" onclick="manualSlide(2)"></div>
+        </div>
+    </div>
+
+    <script>
+        let counter = 0;
+        const slides = document.querySelector('.slides');
+        const slideCount = document.querySelectorAll('.slide').length;
+
+        function autoSlide() {
+            counter++;
+            if (counter >= slideCount) {
+                counter = 0;
+            }
+            slides.style.transform = 'translateX(' + (-counter * 100) + '%)';
+        }
+
+        function manualSlide(index) {
+            counter = index;
+            slides.style.transform = 'translateX(' + (-counter * 100) + '%)';
+        }
+
+        setInterval(autoSlide, 3000);
+    </script>
+    
+    <!-- Hero Section -->
+    <div class="container text-center my-5">
+        <h1 class="display-4">Top-Up Game Instantly</h1>
+        <p class="lead">Fast, reliable, and affordable top-ups for your favorite games.</p>
+        <a href="#games" class="btn btn-primary btn-lg">Get Started</a>
+    </div>
+
+    <!-- Games Section -->
+    <div class="game-container">
+        <h1>TEMUKAN PRODUK FAVORIT</h1>
+        <div class="category-tabs">
+            <button onclick="showGames('popular')">Populer</button>
+            <button onclick="showGames('new')">Rilis Terbaru</button>
+            <button onclick="showGames('mobile')">Mobile Game</button>
+            <button onclick="showGames('pc')">PC Game</button>
+        </div>
+        <div class="game-grid" id="game-grid">
+            <div class="game-item">
+                <img id="game1" src="images/emel.jpg" alt="Game 1">
+            </div>
+            <div class="game-item">
+                <img id="game2" src="images/epep.jpg" alt="Game 2">
+            </div>
+            <div class="game-item">
+                <img id="game3" src="images/hok.png" alt="Game 3">
+            </div>
+            <div class="game-item">
+                <img id="game4" src="images/pubg.jpg" alt="Game 4">
+            </div>
+        </div>
+    </div>
+
+    <div class="payment-box">
+        <h2>Metode Pembayaran</h2>
+        <p>Kami mendukung berbagai metode pembayaran, termasuk QRIS, e-wallet, virtual account, transfer bank, ATM Bersama, dan minimarket.</p>
+        <div class="payment-methods-container">
+            <div class="payment-methods">
+                <img src="images/BCA.png" alt="BCA">
+                <img src="images/BRI.png" alt="BRI">
+                <img src="images/MANDIRI.png" alt="MANDIRI">
+                <img src="images/GOPAY.png" alt="GOPAY">
+                <img src="images/DANA.png" alt="DANA">
+                <img src="images/OVO.png" alt="OVO">
+                <img src="images/QRIS.png" alt="QRIS">
+                <img src="images/BNI.png" alt="BNI">
+                <img src="images/INDOMARET.png" alt="INDOMARET">
+                <img src="images/ALFA.png" alt="ALFA">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Top-Up Game. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

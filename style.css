@@ -1,0 +1,216 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #343a40;
+    padding: 1rem;
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Slider Container */
+.slider {
+    text-align: center;
+    margin-top: 50px;
+}
+/* Hero Section */
+.container.text-center {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.container.text-center h1 {
+    color: #212529;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.container.text-center p {
+    color: #6c757d;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.container.text-center .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Games Section */
+/* Reset styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9e5a4;
+    color: #333;
+    text-align: center;
+}
+
+/* Container styling */
+.game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Title styling */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Tabs styling */
+.category-tabs {
+    margin-bottom: 20px;
+}
+
+.category-tabs button {
+    margin: 0 10px;
+    padding: 10px 15px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.category-tabs button:hover {
+    background-color: #ffcc00;
+}
+
+/* Grid styling */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Game item styling */
+.game-item {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.game-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .banner-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .payment-box {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background-color: #f0c27b;
+    border-radius: 8px;
+  }
+  
+  .payment-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .payment-box p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .payment-methods-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #ffdd99;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .payment-methods {
+    display: inline-block;
+    animation: slide 20s linear infinite;
+  }
+  
+  .payment-methods img {
+    display: inline-block;
+    margin-right: 20px;
+    max-width: 100px;
+    max-height: 50px;
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  
+
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
